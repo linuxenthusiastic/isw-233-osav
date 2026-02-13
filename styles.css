@@ -1,3 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 2px solid #111;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #555;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 a {
   color: #111;
   text-decoration: none;
@@ -40,4 +74,48 @@ ul {
 ul li {
   font-size: 15px;
   padding: 3px 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  font-size: 13px;
+  border: 1px solid #111;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.project {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.project h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.project p {
+  font-size: 14px;
+  color: #555;
+}
+
+.project-features {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.project-features li {
+  padding: 2px 0;
+}
+
+.project-features li::before {
+  content: "› ";
+  color: #999;
 }
