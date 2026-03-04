@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   DOM.todoInput = document.getElementById("todo-input");
 
   DOM.addBtn.addEventListener("click", () => {
-    const cmd = new Command(Commands.ADD);
-    CommandExecutor.execute(cmd);
+    CommandExecutor.execute(new Command(Commands.ADD), { todoInput: DOM.todoInput });
   });
 
   DOM.todoList.addEventListener("click", (event) => {
     if (event.target.classList.contains("delete-btn")) {
+      const text = event.target.dataset.todo;
+      CommandExecutor.execute(new Command(Commands.DELETE, {text}));
     }
   });
 });

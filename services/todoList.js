@@ -32,8 +32,8 @@ export class TodoList {
 
   add(item) {
     const array = Array.from(this.#data);
-    const itemExist = array.filter((t) => t.equals(item).length > 0)
-    if (!itemExists) {
+    const itemExist = array.filter((t) => t.equals(item)).length > 0;
+    if (!itemExist) {
       this.#data.add(item);
       this.notify();
     }
@@ -58,3 +58,4 @@ export class TodoList {
 }
 
 Object.assign(TodoList.prototype, observerMixin);
+export const todoList = new TodoList();
