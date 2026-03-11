@@ -1,6 +1,7 @@
 import { getProductById } from "./Menu.js";
 
 export async function addToCart(id) {
+  console.log("carrito actual:", app.store.cart);
   const product = await getProductById(id);
   const results = app.store.cart.filter((productInCart) => productInCart.product.id == id);
   if (results.length == 1) {
@@ -8,9 +9,10 @@ export async function addToCart(id) {
       p.product.id == id ? { ...p, quantity: p.quantity + 1 } : p,
     );
   } else {
-    // app.store.cart.push(results);
     app.store.cart = [...app.store.cart, { product, quantity: 1 }];
   }
 }
 
-export function removeFromCart(id) {}
+export function removeFromCart(id) {
+  app.store.cart = app.store.cart.filter((item) => item.product.id != id);
+}

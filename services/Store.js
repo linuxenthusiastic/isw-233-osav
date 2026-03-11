@@ -1,6 +1,8 @@
+import Storage from './Storage.js'
+
 const Store = {
   menu: null,
-  cart: [],
+  cart: Storage.load("cart") ?? [],
 };
 
 const proxiedStore = new Proxy(Store, {
@@ -10,6 +12,7 @@ const proxiedStore = new Proxy(Store, {
       window.dispatchEvent(new Event("appmenuchange"));
     }
     if (property == "cart") {
+      Storage.save("cart",value);
       window.dispatchEvent(new Event("appcartchange"));
     }
     return true;
