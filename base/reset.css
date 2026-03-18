@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.seccion {
+    display: none;
+    min-height: 100vh;
+    padding: 100px 24px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+.accent {
+    color: var(--color-accent);
+}
+
+.seccion-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

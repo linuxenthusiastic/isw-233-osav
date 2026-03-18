@@ -1,0 +1,83 @@
+#home {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+#home.activa {
+    display: flex;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    margin-bottom: 32px;
+}
+
+#btnProjects {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#btnProjects:hover {
+    opacity: 0.85;
+}
+
+.home-saluda {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+#home h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.home-titulo {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.home-descripcion {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    max-width: 500px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.home-cta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-secundario {
+    color: var(--color-primary);
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.btn-secundario:hover {
+    border-color: var(--color-accent);
+}
