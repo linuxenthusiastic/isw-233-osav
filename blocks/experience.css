@@ -1,0 +1,57 @@
+.timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #222;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 48px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 2px solid var(--bg-primary);
+}
+
+.timeline-fecha {
+    color: var(--color-accent);
+    font-size: 13px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.timeline-contenido h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline-empresa {
+    color: var(--color-secondary);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.timeline-contenido p {
+    color: var(--color-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+}
