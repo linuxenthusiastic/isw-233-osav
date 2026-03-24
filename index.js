@@ -29,6 +29,10 @@ btnProjects.addEventListener("click", () => {
     navegarA("projects");
 })
 
+const btnContact = document.querySelector('.btn-secundario')
+btnContact.addEventListener("click" , () => {
+    navegarA("contact")
+})
 
 links.forEach(l => {
     const text = l.textContent;
@@ -40,3 +44,5 @@ links.forEach(l => {
         l.textContent = text;
     })
 })
+
+
