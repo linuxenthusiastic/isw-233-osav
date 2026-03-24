@@ -10,6 +10,9 @@
     padding: 100px 24px 60px;
     max-width: 900px;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .seccion.activa {
@@ -24,4 +27,8 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 48px;
+}
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

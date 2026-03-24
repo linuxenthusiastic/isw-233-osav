@@ -4,11 +4,15 @@ const secciones = document.querySelectorAll(".seccion");
 function navegarA(id){
     secciones.forEach(seccion => {
         seccion.classList.remove("activa");
+        seccion.classList.remove("visible");
     })
 
     const destino = document.querySelector(`#${id}`);
     if(destino) {
         destino.classList.add("activa");
+        setTimeout(() => {
+            destino.classList.add("visible");
+        },50);
     }
 }
 
@@ -46,3 +50,14 @@ links.forEach(l => {
 })
 
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        }
+    })
+})
+
+secciones.forEach(seccion => {
+    observer.observe(seccion);
+})
