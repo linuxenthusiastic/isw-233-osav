@@ -3,6 +3,7 @@ const secciones = document.querySelectorAll(".seccion");
 const blogGrid = document.querySelector("#blogGrid");
 const contadorPost = document.querySelector("#contadorPost");
 const btnAgregarPost = document.querySelector("#btnAgregarPost")
+const fotoPerfil = document.querySelector(".foto-perfil")
 
 links.forEach(l => {
     const text = l.textContent;
@@ -54,6 +55,10 @@ const lazyObserver = new IntersectionObserver((entries) => {
     })
 })
 
+if(fotoPerfil) {
+    lazyObserver.observe(fotoPerfil);
+}
+
 let numeroPost = 0;
 btnAgregarPost.addEventListener("click", () => {
     numeroPost++;
@@ -73,3 +78,6 @@ btnAgregarPost.addEventListener("click", () => {
     const nuevaImg = article.querySelector(".lazy");
     lazyObserver.observe(nuevaImg);
 })
+
+
+

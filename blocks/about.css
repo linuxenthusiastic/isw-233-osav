@@ -1,8 +1,9 @@
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: start;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 48px;
 }
 
 .about-texto p {
@@ -38,5 +39,16 @@
     .about-grid {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+}
+
+.foto-perfil {
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 }
