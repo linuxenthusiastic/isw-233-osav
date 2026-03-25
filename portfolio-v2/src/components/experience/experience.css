@@ -1,0 +1,71 @@
+.experience {
+    min-height: 100vh;
+    padding: 100px 24px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.experience.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.experience__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.experience__timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.experience__timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #222;
+}
+
+.experience__item {
+    position: relative;
+    padding-bottom: 48px;
+}
+
+.experience__item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 2px solid var(--bg-primary);
+}
+
+.experience__date {
+    color: var(--color-accent);
+    font-size: 13px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.experience__role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.experience__company {
+    color: var(--color-secondary);
+    font-size: 14px;
+    display: block;
+}

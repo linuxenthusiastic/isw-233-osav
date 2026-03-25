@@ -1,0 +1,26 @@
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #1a1a1a;
+    --color-primary: #ffffff;
+    --color-secondary: #a0a0a0;
+    --color-accent: #6366f1;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--color-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
