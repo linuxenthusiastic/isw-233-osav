@@ -21,7 +21,7 @@
     </header>
     <main>
         
-        <section id="home" class="seccion activa">
+        <section id="home" class="seccion">
             <h1>Santiago Abuawad</h1>
             <h2 class="home-titulo">Full Stack WEB3 Developer</h2>
             <p class="home-description">
@@ -30,7 +30,7 @@
             </p>
 
             <div class="home-cta">
-                <button id="btnProjects">Ver proyectos</button>
+                <a href="#projects" class="btn-primario">Ver proyectos</a>
                 <a href="#contact" class="btn-secundario">Contactame</a>
             </div>
         </section>
@@ -90,14 +90,13 @@
 
         <section id="blog" class="seccion">
             <h2 class="blog-titulo">My Blog</h2>
-            <div class="blog-coming">
-                <p>Coming soon..</p>
-                <span>Vuelta pronto</span>
-            </div>
+            <p id="contadorPost">Post: 0</p>
+            <button id="btnAgregarPost">Agregar post</button>
+            <div id="blogGrid"></div>
         </section>
 
 
-        <section id="contact" class="seccion activa">
+        <section id="contact" class="seccion">
             <h2 class="seccion-titulo">Get in Touch</h2>
         
             <div class="contact-grid">

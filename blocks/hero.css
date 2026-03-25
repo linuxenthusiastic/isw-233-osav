@@ -1,10 +1,8 @@
 #home {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     min-height: 100vh;
-    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
 }
 
 #home.activa {
@@ -17,7 +15,7 @@
     margin-bottom: 32px;
 }
 
-#btnProjects {
+.btn-primario {
     background-color: var(--color-accent);
     color: white;
     border: none;
@@ -26,9 +24,10 @@
     font-size: 16px;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    text-decoration: none;
 }
 
-#btnProjects:hover {
+.btn-primario:hover {
     opacity: 0.85;
 }
 

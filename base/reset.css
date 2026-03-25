@@ -4,8 +4,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 .seccion {
-    display: none;
     min-height: 100vh;
     padding: 100px 24px 60px;
     max-width: 900px;
@@ -13,10 +15,6 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.seccion.activa {
-    display: block;
 }
 
 .accent {
