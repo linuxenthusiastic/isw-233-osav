@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Abuawad</title>
+</head>
+<body>
+
+    {{> header}}
+
+    <main class="main">
+
+        <section id="home" class="hero seccion">
+            <h1 class="hero__title">Santiago Abuawad</h1>
+            <h2 class="hero__subtitle">Full Stack WEB3 Developer</h2>
+            <p class="hero__description">
+                Construyo aplicaciones web sólidas y descentralizadas.
+                Trabajando con Ethereum, Solana y nuevas tecnologías.
+            </p>
+            <div class="hero__cta">
+                <a href="#projects" class="btn btn--primary">Ver proyectos</a>
+                <a href="#contact" class="btn btn--secondary">Contactame</a>
+            </div>
+        </section>
+
+        <section id="about" class="about seccion">
+            <h2 class="about__title">About</h2>
+            <div class="about__grid">
+                <div class="about__pic">
+                    <img
+                        data-src="./img/yo.png"
+                        alt="Santiago Abuawad"
+                        class="about__img lazy"
+                        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    />
+                </div>
+                <p class="about__text">
+                    Soy Santiago Abuawad, desarrollador Full Stack de Santa Cruz, Bolivia.
+                    Me especializo en construir aplicaciones web modernas con tecnologías
+                    en el ecosistema Web3.
+                </p>
+            </div>
+            <div class="about__stack">
+                <h3 class="about__stack-title">Stack tecnológico</h3>
+                <div class="about__stack-grid">
+                    <span class="about__stack-item">JavaScript</span>
+                    <span class="about__stack-item">C#</span>
+                    <span class="about__stack-item">Node.js</span>
+                    <span class="about__stack-item">PostgreSQL</span>
+                    <span class="about__stack-item">Supabase</span>
+                    <span class="about__stack-item">Solidity</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience seccion">
+            <h2 class="experience__title">My Experience</h2>
+            <div class="experience__timeline">
+                <div class="experience__item">
+                    <div class="experience__date">2026 - Presente</div>
+                    <div class="experience__content">
+                        <h3 class="experience__role">Estudiante</h3>
+                        <span class="experience__company">UCB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects seccion">
+            <h2 class="projects__title">My Projects</h2>
+            <div class="projects__grid">
+                <article class="projects__card">
+                    <h3 class="projects__card-title">ApheliosID</h3>
+                    <div class="projects__card-links">
+                        <a href="" target="_blank" class="projects__card-link">Github</a>
+                    </div>
+                    <p class="projects__card-description">Descripción breve del proyecto</p>
+                    <div class="projects__card-stack">
+                        <span class="projects__card-tag">C#</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="blog" class="blog seccion">
+            <h2 class="blog__title">My Blog</h2>
+            <p class="blog__counter" id="contadorPost">Posts: 0</p>
+            <button class="blog__btn" id="btnAgregarPost">Agregar post</button>
+            <div class="blog__grid" id="blogGrid"></div>
+        </section>
+
+        <section id="contact" class="contact seccion">
+            <h2 class="contact__title">Get in Touch</h2>
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <p class="contact__text">Si tenés un proyecto en mente hablame, lo hacemos realidad.</p>
+                    <div class="contact__links">
+                        <a href="mailto:abuawadsantiago@gmail.com" class="contact__link">abuawadsantiago@gmail.com</a>
+                        <a href="https://github.com/abuawadsantiago" target="_blank" class="contact__link">GitHub</a>
+                        <a href="https://linkedin.com/in/santiagoabuawad" target="_blank" class="contact__link">LinkedIn</a>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact__form">
+                    <div class="contact__form-group">
+                        <label for="nombre" class="contact__label">Nombre</label>
+                        <input type="text" id="nombre" class="contact__input" placeholder="Tu nombre" />
+                    </div>
+                    <div class="contact__form-group">
+                        <label for="email" class="contact__label">Email</label>
+                        <input type="email" id="email" class="contact__input" placeholder="tu@email.com" />
+                    </div>
+                    <div class="contact__form-group">
+                        <label for="mensaje" class="contact__label">Mensaje</label>
+                        <textarea id="mensaje" class="contact__input" rows="5" placeholder="Tu mensaje..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
