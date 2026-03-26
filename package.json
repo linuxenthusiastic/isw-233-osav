@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "eslint": "^10.1.0",
+    "postcss": "^8.5.8",
+    "postcss-import": "^16.1.1",
+    "postcss-nested": "^7.0.2",
+    "stylelint": "^16.26.1",
+    "stylelint-selector-bem-pattern": "^4.0.1",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
