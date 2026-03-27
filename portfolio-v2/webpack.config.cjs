@@ -30,6 +30,11 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
+                    test: /\.tsx?$/,
+                    use: 'ts-loader',
+                    exclude: /node_modules/,
+                },
+                {
                     test: /\.hbs$/,
                     use: ['handlebars-loader'],
                 },
@@ -62,7 +67,9 @@ module.exports = (env, argv) => {
                 },
             ],
         },
-
+        resolve: {
+            extensions: ['.tsx', '.ts', '.js'],
+        },
         plugins: [
             new CopyPlugin({
                 patterns: [
