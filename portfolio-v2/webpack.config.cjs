@@ -11,7 +11,7 @@ module.exports = (env, argv) => {
     const isDev = argv.mode === 'development';
 
     return {
-        entry: './src/main.js',
+        entry: './src/main.ts',
 
         output: {
             path: path.resolve(__dirname, 'dist'),

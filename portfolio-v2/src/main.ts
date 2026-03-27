@@ -6,9 +6,9 @@ import './components/experience/experience.css'
 import './components/projects/projects.css'
 import './components/blog/blog.css'
 import './components/contact/contact.css'
-import './components/header/header.js'
-import './components/blog/blog.js'
-import './components/contact/contact.js'
+import './components/header/header'
+import './components/blog/blog'
+import './components/contact/contact'
 
 const secciones = document.querySelectorAll('.seccion');
 
@@ -31,8 +31,8 @@ secciones.forEach(seccion => {
 const lazyObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
+            const img = entry.target as HTMLImageElement; // Cast a HTMLImageElement
+            img.src = img.dataset.src ?? ''; // dataset.src puede ser undefined
             img.classList.remove('lazy');
             lazyObserver.unobserve(img);
         }
